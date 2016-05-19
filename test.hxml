@@ -1,0 +1,6 @@
+--interp
+-main Test
+-lib insensitive
+-lib utest
+-cp test
+
