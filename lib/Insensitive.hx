@@ -15,10 +15,8 @@ abstract Insensitive(String) from String {
 		var i = startIndex;
 		while (i + blen - 1 < alen) {
 			var j = 0;
-			while (j < blen) {
-				if (!imatch(this.fastCodeAt(i + j), str.fastCodeAt(j))) break;
+			while (j < blen && imatch(this.fastCodeAt(i + j), str.fastCodeAt(j)))
 				j++;
-			}
 			if (j == blen) return i;
 			i++;
 		}
@@ -33,10 +31,8 @@ abstract Insensitive(String) from String {
 		var i = startIndex == -1 ? alen - blen : startIndex;
 		while (i >= 0) {
 			var j = 0;
-			while (j < blen) {
-				if (!imatch(this.fastCodeAt(i + j), str.fastCodeAt(j))) break;
+			while (j < blen && imatch(this.fastCodeAt(i + j), str.fastCodeAt(j)))
 				j++;
-			}
 			if (j == blen) return i;
 			i--;
 		}
