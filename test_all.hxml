@@ -1,0 +1,26 @@
+-main Test
+-lib insensitive
+-lib utest
+-cp test
+
+--each
+
+-neko bin/test.n
+-cmd echo "TESTING: neko"
+-cmd neko bin/test.n
+-cmd echo "done"
+
+--next
+
+-java bin/java
+-cmd echo "TESTING: java"
+-cmd java -jar bin/java/Test.jar
+-cmd echo "done"
+
+--next
+
+-js bin/test.js
+-cmd echo "TESTING: js"
+-cmd nodejs bin/test.js
+-cmd echo "done"
+
